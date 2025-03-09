@@ -1,0 +1,8 @@
+{
+  "name": "requestV2",
+  "creator": "Ecolsson (uploaded by McPqndq)",
+  "description": "A nicer alternative to XMLHttpRequest with a promise-like API. See the README.md for a full api description. (PS from McPqndq: this module is a copy paste of Ecolsson's 'request' except using a different Promise polyfill.)",
+  "requires": ["PromiseV2"],
+  "version": "2.1.1",
+  "entry": "index.js"
+}
