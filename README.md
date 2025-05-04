@@ -5,9 +5,9 @@ Are you tired of struggling with the Dance Room in the Mirrorverse because of hi
 
 ## How to Use
 
-1. Download the latest `.zip` release.
-2. Extract it into your `modules` folder.
-3. Enjoy the Dance Room without any stress! 💃🕺
+1. Download the `latest.zip` release.
+2. Extract it into your `modules` folder. (to open it go into your game and type `/ct folder`)
+3. Go to Dance Room follow the ingame tutorial and enjoy the Dance Room without any stress! 💃🕺
 
 Good luck and have fun! 😎
 
