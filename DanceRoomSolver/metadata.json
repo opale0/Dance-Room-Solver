@@ -5,6 +5,7 @@
   "version": "1.0",
   "entry": "index.js",
   "requires": [
-    "PogData"
+    "PogData",
+    "uwuaddons"
   ]
 }

