@@ -1,4 +1,5 @@
 # Dance-Room-Solver
+(this readme is generated with chatgpt bc I was lazy)
 
 Are you tired of struggling with the Dance Room in the Mirrorverse because of high ping? I was too! That's why I created this script in ChatTriggers that automatically solves it for you — and it works like a charm! 🎉
 
@@ -19,5 +20,3 @@ Good luck and have fun! 😎
 - Dance Room Solver
 - Dance Room
 - Dance Room Talisman
-
-this readme is generated with chatgpt bc I was lazy
