@@ -2,7 +2,7 @@
 
 import PogObject from "../PogData"
 const uwuaddons = require("../uwuaddons");
-let settings = new PogObject("DanceRoomSolver", { firstTime: true, volume: 1.0, recordVolume: 1.0 }, "settings.json")
+let settings = new PogObject("DanceRoomSolver", { firstTime: true, volume: 1.0, recordVolume: 1.0, serverID: "oxetotafek" }, "settings.json");
 
 
 
